@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva tu cita | CCBARBER</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <img src="img/logo.png" alt="Logo Barbería" class="logo">
+      <h1>CC BARBER | BARBERÍA</h1>
+      <p>Reserva tu cita en menos de 1 minuto</p>
+    </header>
+
+    <div class="card">
+      <form id="citaForm">
+
+        <label>Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+        <label>Teléfono</label>
+        <input type="tel" id="telefono" placeholder="600 000 000" required>
+
+        <label>Servicio</label>
+        <select id="servicio" required>
+          <option value="">Selecciona un servicio</option>
+          <option value="30|7">Corte (30 min) – 7€</option>
+          <option value="30|8">Corte + Cejas (30 min) – 8€</option>
+          <option value="60|12">Corte + Barba (60 min) – 12€</option>
+        </select>
+
+        <label>Fecha</label>
+        <input type="date" id="fecha" required>
+
+        <label>Hora</label>
+        <select id="hora" required>
+          <option value="">Selecciona una hora</option>
+        </select>
+
+        <button type="submit">Confirmar cita</button>
+      </form>
+
+      <p id="estado" class="estado"></p>
+    </div>
+
+    <footer>
+      <p>📍 Tu barbería de confianza</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
