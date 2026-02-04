@@ -6,53 +6,84 @@
   <title>Reserva tu cita | CCBARBER</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("eKREmJniad6a8BOJa");
+  })();
+</script>
+<script type="module" src="script.js"></script>
+</script>
 <body>
 
   <div class="container">
 
     <header>
-      <img src="img/logo.png" alt="Logo Barbería" class="logo">
+      <img src="img/logo.png" class="logo">
       <h1>CC BARBER | BARBERÍA</h1>
       <p>Reserva tu cita en menos de 1 minuto</p>
     </header>
 
-    <div class="card">
-      <form id="citaForm">
+  <div class="card">
+    <form id="citaForm">
 
-        <label>Nombre</label>
-        <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <label>👤 Nombre</label>
+      <input type="text" id="nombre" placeholder="Tu nombre" required>
 
-        <label>Teléfono</label>
-        <input type="tel" id="telefono" placeholder="600 000 000" required>
+      <label>📧 Email</label>
+      <input type="email" id="email" placeholder="tuemail@gmail.com" required>
 
-        <label>Servicio</label>
-        <select id="servicio" required>
-          <option value="">Selecciona un servicio</option>
-          <option value="30|7">Corte (30 min) – 7€</option>
-          <option value="30|8">Corte + Cejas (30 min) – 8€</option>
-          <option value="60|12">Corte + Barba (60 min) – 12€</option>
-        </select>
+      <label>📞 Teléfono</label>
+      <input type="tel" id="telefono" placeholder="600 000 000" required>
 
-        <label>Fecha</label>
-        <input type="date" id="fecha" required>
+      <label>💈 Servicio</label>
+      <div class="servicios">
 
-        <label>Hora</label>
-        <select id="hora" required>
-          <option value="">Selecciona una hora</option>
-        </select>
+        <div class="servicio-card" data-duracion="30" data-precio="7">
+          <div class="servicio-info">
+            <h3>Corte</h3>
+            <p>30 min · 7€</p>
+          </div>
+        </div>
 
-        <button type="submit">Confirmar cita</button>
-      </form>
+        <div class="servicio-card" data-duracion="30" data-precio="8">
+          <div class="servicio-info">
+            <h3>Corte + Cejas</h3>
+            <p>30 min · 8€</p>
+          </div>
+        </div>
 
-      <p id="estado" class="estado"></p>
-    </div>
+        <div class="servicio-card" data-duracion="60" data-precio="12">
+          <div class="servicio-info">
+            <h3>Corte + Barba</h3>
+            <p>60 min · 12€</p>
+          </div>
+        </div>
 
-    <footer>
-      <p>📍 Tu barbería de confianza</p>
-    </footer>
+      </div>
 
+      <label>📅 Fecha</label>
+      <input type="date" id="fecha" required>
+
+      <label>⏰ Hora</label>
+      <select id="hora" class="horas"></div>
+      <div id="horas"></div>
+
+      <hr class="divider">
+
+      <button type="submit">Confirmar cita</button>
+
+    </form>
+
+    <p id="estado" class="estado"></p>
   </div>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>📍 Tu barbería de confianza</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
