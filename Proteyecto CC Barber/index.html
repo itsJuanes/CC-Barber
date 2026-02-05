@@ -12,8 +12,8 @@
     emailjs.init("eKREmJniad6a8BOJa");
   })();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="module" src="script.js"></script>
-</script>
 <body>
 
   <div class="container">
@@ -28,7 +28,7 @@
     <form id="citaForm">
 
       <label>👤 Nombre</label>
-      <input type="text" id="nombre" placeholder="Tu nombre" required>
+      <input type="text" id="nombre" placeholder="Nombre y Apellidos" required>
 
       <label>📧 Email</label>
       <input type="email" id="email" placeholder="tuemail@gmail.com" required>
@@ -56,7 +56,7 @@
         <div class="servicio-card" data-duracion="60" data-precio="12">
           <div class="servicio-info">
             <h3>Corte + Barba</h3>
-            <p>60 min · 12€</p>
+            <p>60 min · 10€</p>
           </div>
         </div>
 
@@ -66,8 +66,7 @@
       <input type="date" id="fecha" required>
 
       <label>⏰ Hora</label>
-      <select id="hora" class="horas"></div>
-      <div id="horas"></div>
+      <div id="horas" class="horas"></div>
 
       <hr class="divider">
 
@@ -78,12 +77,18 @@
     <p id="estado" class="estado"></p>
   </div>
 
+<div id="cancelar-seccion" style="margin-top: 50px; border-top: 1px solid #ccc; padding-top: 20px;">
+  <h3>¿Quieres cancelar tu cita?</h3>
+  <p>Introduce el email con el que hiciste la reserva:</p>
+  <input type="email" id="emailCancelar" placeholder="tu@email.com">
+  <button id="btnCancelarCita">Buscar y Cancelar</button>
+</div>
+
   <footer>
     <p>📍 Tu barbería de confianza</p>
   </footer>
 
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>
